@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eWn-S5-b63">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ge2-OV-r0p">
+            <objects>
+                <navigationController storyboardIdentifier="BaseNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eWn-S5-b63" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wff-yt-YpE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xr2-B0-Ow8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekG-Vi-XyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1002" y="-129"/>
+        </scene>
+        <!--Main Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TLMainMapViewController" customModule="Trip_Landmark_Remark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Njm-mQ-NCb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-se-tWm" customClass="TLFloatButton" customModule="Trip_Landmark_Remark" customModuleProvider="target">
+                                <rect key="frame" x="297" y="597" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IFQ-mW-WHT"/>
+                                    <constraint firstAttribute="width" secondItem="JfE-se-tWm" secondAttribute="height" multiplier="1:1" id="ur0-i5-v2h"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="addNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2e-qQ-w98"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TXU-2Z-sEU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TXU-2Z-sEU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2SZ-6B-CfC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TXU-2Z-sEU" secondAttribute="trailing" id="CN8-0F-GSC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JfE-se-tWm" secondAttribute="bottom" constant="20" id="HNe-Jg-RTC"/>
+                            <constraint firstItem="Njm-mQ-NCb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="K6F-ZB-obN"/>
+                            <constraint firstItem="Njm-mQ-NCb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MDt-3C-k4h"/>
+                            <constraint firstItem="TXU-2Z-sEU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZN8-BJ-UbU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JfE-se-tWm" secondAttribute="trailing" constant="28" id="blb-Zm-8BO"/>
+                            <constraint firstItem="Njm-mQ-NCb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bs5-Vn-KBE"/>
+                            <constraint firstItem="Njm-mQ-NCb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vd0-4g-a7W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jPG-Ot-emQ"/>
+                    <connections>
+                        <outlet property="floatyButton" destination="JfE-se-tWm" id="6YG-O1-j3E"/>
+                        <outlet property="mapView" destination="Njm-mQ-NCb" id="hQ9-m5-ZzV"/>
+                        <outlet property="searchBar" destination="TXU-2Z-sEU" id="CnW-U2-3qU"/>
+                        <segue destination="EUl-l9-8yr" kind="show" identifier="ShowTripNotePage" id="15P-xj-WhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188" y="-129"/>
+        </scene>
+        <!--TripNote-->
+        <scene sceneID="0wg-6e-jHA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TripNote" id="EUl-l9-8yr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XT8-dc-NgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="-294"/>
+        </scene>
+    </scenes>
+</document>

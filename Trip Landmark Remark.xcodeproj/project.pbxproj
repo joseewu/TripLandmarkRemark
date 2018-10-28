@@ -1,0 +1,1082 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A9111712BC65D0332D69374 /* Pods_Trip_Landmark_RemarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041018DAF7A930925600C6E0 /* Pods_Trip_Landmark_RemarkTests.framework */; };
+		9F4EDCCE356B3AF670452702 /* Pods_Trip_Landmark_Remark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5E9F91122805797715863D /* Pods_Trip_Landmark_Remark.framework */; };
+		C94A27874EEE894810EA76D6 /* Pods_Trip_Landmark_RemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC250C7E61AC6435127589 /* Pods_Trip_Landmark_RemarkUITests.framework */; };
+		EB544338217D7373009C7AFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544337217D7373009C7AFB /* User.swift */; };
+		EB54433A217D7381009C7AFB /* TripNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544339217D7381009C7AFB /* TripNote.swift */; };
+		EB54433D217D7828009C7AFB /* TLTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54433C217D7828009C7AFB /* TLTheme.swift */; };
+		EB54433F217D784B009C7AFB /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54433E217D784A009C7AFB /* UIColor+HexString.swift */; };
+		EB544341217D79E8009C7AFB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544340217D79E8009C7AFB /* EndPointType.swift */; };
+		EB544343217D7DC0009C7AFB /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544342217D7DC0009C7AFB /* HTTPTask.swift */; };
+		EB544365217EC20F009C7AFB /* TLUserNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */; };
+		EB544369217EC227009C7AFB /* TLMainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544367217EC227009C7AFB /* TLMainMapViewController.swift */; };
+		EB54436C217EC29C009C7AFB /* TLMainMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */; };
+		EB54436E217EC310009C7AFB /* TLPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54436D217EC310009C7AFB /* TLPinView.swift */; };
+		EB544370217EC323009C7AFB /* TLPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB54436F217EC323009C7AFB /* TLPinView.xib */; };
+		EB544372217F088A009C7AFB /* TripNoteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544371217F088A009C7AFB /* TripNoteAnnotation.swift */; };
+		EB544374217F1410009C7AFB /* TripNoteAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544373217F1410009C7AFB /* TripNoteAnnotationView.swift */; };
+		EB544376217F469B009C7AFB /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544375217F469B009C7AFB /* Parameter.swift */; };
+		EB544378217F48C9009C7AFB /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544377217F48C9009C7AFB /* URLParameterEncoder.swift */; };
+		EB54437A217F4933009C7AFB /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544379217F4933009C7AFB /* JSONParameterEncoder.swift */; };
+		EB54437C217F499F009C7AFB /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54437B217F499F009C7AFB /* NetworkRouter.swift */; };
+		EB54437E217F4A3D009C7AFB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54437D217F4A3D009C7AFB /* Router.swift */; };
+		EB544381217F5E15009C7AFB /* TLFloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544380217F5E15009C7AFB /* TLFloatButton.swift */; };
+		EB544384217F6900009C7AFB /* UserInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544382217F6900009C7AFB /* UserInputTableViewCell.swift */; };
+		EB544385217F6900009C7AFB /* UserInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB544383217F6900009C7AFB /* UserInputTableViewCell.xib */; };
+		EB544388217F6E31009C7AFB /* TripNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB544387217F6E31009C7AFB /* TripNote.storyboard */; };
+		EB54438B217F7DD5009C7AFB /* TripNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438A217F7DD5009C7AFB /* TripNoteService.swift */; };
+		EB54438D217F8066009C7AFB /* TripNoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */; };
+		EB54438F217F821D009C7AFB /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438E217F821D009C7AFB /* NetworkResponse.swift */; };
+		EB5F849B21839D2500623CE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB5F849A21839D2500623CE4 /* GoogleService-Info.plist */; };
+		EB5F849E2184002800623CE4 /* TLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F849C2184002800623CE4 /* TLLoginViewController.swift */; };
+		EB5F84A1218401B900623CE4 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5F84A0218401B900623CE4 /* LoginStoryboard.storyboard */; };
+		EB83D81A2185EC570005869D /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D8192185EC570005869D /* UserManager.swift */; };
+		EB83D81C2185F4EF0005869D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D81B2185F4EE0005869D /* Coordinator.swift */; };
+		EB91CC8A217B46BE0008787F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91CC89217B46BE0008787F /* AppDelegate.swift */; };
+		EB91CC8F217B46BE0008787F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB91CC8D217B46BE0008787F /* Main.storyboard */; };
+		EB91CC92217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB91CC90217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld */; };
+		EB91CC94217B46BF0008787F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB91CC93217B46BF0008787F /* Assets.xcassets */; };
+		EB91CC97217B46BF0008787F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB91CC95217B46BF0008787F /* LaunchScreen.storyboard */; };
+		EB91CCA2217B46BF0008787F /* Trip_Landmark_RemarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91CCA1217B46BF0008787F /* Trip_Landmark_RemarkTests.swift */; };
+		EB91CCAD217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91CCAC217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift */; };
+		EBB49388218003A100F49970 /* HTTPURLResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB49387218003A100F49970 /* HTTPURLResponseHandler.swift */; };
+		EBB4938A21800B1200F49970 /* ArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4938921800B1200F49970 /* ArrayWrapper.swift */; };
+		EBB493902180184500F49970 /* TLUserNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */; };
+		EBB4939321801A0000F49970 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4939121801A0000F49970 /* ContentTableViewCell.swift */; };
+		EBB4939421801A0000F49970 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB4939221801A0000F49970 /* ContentTableViewCell.xib */; };
+		EBB4939621801DED00F49970 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4939521801DED00F49970 /* Reusable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB91CC9E217B46BF0008787F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB91CC7E217B46BD0008787F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB91CC85217B46BD0008787F;
+			remoteInfo = "Trip Landmark Remark";
+		};
+		EB91CCA9217B46BF0008787F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB91CC7E217B46BD0008787F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB91CC85217B46BD0008787F;
+			remoteInfo = "Trip Landmark Remark";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03360FD81A382E5E14FE35AB /* Pods-Trip Landmark RemarkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark RemarkUITests.debug.xcconfig"; path = "Target Support Files/Pods-Trip Landmark RemarkUITests/Pods-Trip Landmark RemarkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		041018DAF7A930925600C6E0 /* Pods_Trip_Landmark_RemarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip_Landmark_RemarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12A472D7276597439F74AB96 /* Pods-Trip Landmark Remark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark Remark.release.xcconfig"; path = "Target Support Files/Pods-Trip Landmark Remark/Pods-Trip Landmark Remark.release.xcconfig"; sourceTree = "<group>"; };
+		5F5E9F91122805797715863D /* Pods_Trip_Landmark_Remark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip_Landmark_Remark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E61EF1673CA34152B8A5B0 /* Pods-Trip Landmark Remark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark Remark.debug.xcconfig"; path = "Target Support Files/Pods-Trip Landmark Remark/Pods-Trip Landmark Remark.debug.xcconfig"; sourceTree = "<group>"; };
+		AC8F6655AC1DA54D1F48A07F /* Pods-Trip Landmark RemarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark RemarkUITests.release.xcconfig"; path = "Target Support Files/Pods-Trip Landmark RemarkUITests/Pods-Trip Landmark RemarkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6F33666C1321FE5E5AF3ADA /* Pods-Trip Landmark RemarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark RemarkTests.debug.xcconfig"; path = "Target Support Files/Pods-Trip Landmark RemarkTests/Pods-Trip Landmark RemarkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DACC250C7E61AC6435127589 /* Pods_Trip_Landmark_RemarkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip_Landmark_RemarkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87D126FF14E894DE4943383 /* Pods-Trip Landmark RemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark RemarkTests.release.xcconfig"; path = "Target Support Files/Pods-Trip Landmark RemarkTests/Pods-Trip Landmark RemarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB544337217D7373009C7AFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EB544339217D7381009C7AFB /* TripNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNote.swift; sourceTree = "<group>"; };
+		EB54433C217D7828009C7AFB /* TLTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLTheme.swift; sourceTree = "<group>"; };
+		EB54433E217D784A009C7AFB /* UIColor+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		EB544340217D79E8009C7AFB /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		EB544342217D7DC0009C7AFB /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteViewController.swift; sourceTree = "<group>"; };
+		EB544367217EC227009C7AFB /* TLMainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapViewController.swift; sourceTree = "<group>"; };
+		EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapViewModel.swift; sourceTree = "<group>"; };
+		EB54436D217EC310009C7AFB /* TLPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLPinView.swift; sourceTree = "<group>"; };
+		EB54436F217EC323009C7AFB /* TLPinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLPinView.xib; sourceTree = "<group>"; };
+		EB544371217F088A009C7AFB /* TripNoteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteAnnotation.swift; sourceTree = "<group>"; };
+		EB544373217F1410009C7AFB /* TripNoteAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteAnnotationView.swift; sourceTree = "<group>"; };
+		EB544375217F469B009C7AFB /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		EB544377217F48C9009C7AFB /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		EB544379217F4933009C7AFB /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		EB54437B217F499F009C7AFB /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		EB54437D217F4A3D009C7AFB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EB544380217F5E15009C7AFB /* TLFloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLFloatButton.swift; sourceTree = "<group>"; };
+		EB544382217F6900009C7AFB /* UserInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTableViewCell.swift; sourceTree = "<group>"; };
+		EB544383217F6900009C7AFB /* UserInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInputTableViewCell.xib; sourceTree = "<group>"; };
+		EB544387217F6E31009C7AFB /* TripNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripNote.storyboard; sourceTree = "<group>"; };
+		EB54438A217F7DD5009C7AFB /* TripNoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteService.swift; sourceTree = "<group>"; };
+		EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteEndpoint.swift; sourceTree = "<group>"; };
+		EB54438E217F821D009C7AFB /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		EB5F849A21839D2500623CE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB5F849C2184002800623CE4 /* TLLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLLoginViewController.swift; sourceTree = "<group>"; };
+		EB5F84A0218401B900623CE4 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		EB83D8192185EC570005869D /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		EB83D81B2185F4EE0005869D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EB91CC86217B46BD0008787F /* Trip Landmark Remark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Landmark Remark.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB91CC89217B46BE0008787F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB91CC8E217B46BE0008787F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB91CC91217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Trip_Landmark_Remark.xcdatamodel; sourceTree = "<group>"; };
+		EB91CC93217B46BF0008787F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB91CC96217B46BF0008787F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB91CC98217B46BF0008787F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB91CC9D217B46BF0008787F /* Trip Landmark RemarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trip Landmark RemarkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB91CCA1217B46BF0008787F /* Trip_Landmark_RemarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip_Landmark_RemarkTests.swift; sourceTree = "<group>"; };
+		EB91CCA3217B46BF0008787F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB91CCA8217B46BF0008787F /* Trip Landmark RemarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trip Landmark RemarkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB91CCAC217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip_Landmark_RemarkUITests.swift; sourceTree = "<group>"; };
+		EB91CCAE217B46BF0008787F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB49387218003A100F49970 /* HTTPURLResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseHandler.swift; sourceTree = "<group>"; };
+		EBB4938921800B1200F49970 /* ArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayWrapper.swift; sourceTree = "<group>"; };
+		EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteViewModel.swift; sourceTree = "<group>"; };
+		EBB4939121801A0000F49970 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		EBB4939221801A0000F49970 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
+		EBB4939521801DED00F49970 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB91CC83217B46BD0008787F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F4EDCCE356B3AF670452702 /* Pods_Trip_Landmark_Remark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CC9A217B46BF0008787F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9111712BC65D0332D69374 /* Pods_Trip_Landmark_RemarkTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CCA5217B46BF0008787F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C94A27874EEE894810EA76D6 /* Pods_Trip_Landmark_RemarkUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55656A0FBD2430AE307DCB34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5E9F91122805797715863D /* Pods_Trip_Landmark_Remark.framework */,
+				041018DAF7A930925600C6E0 /* Pods_Trip_Landmark_RemarkTests.framework */,
+				DACC250C7E61AC6435127589 /* Pods_Trip_Landmark_RemarkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B51032F1DC593CDFFA058A75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76E61EF1673CA34152B8A5B0 /* Pods-Trip Landmark Remark.debug.xcconfig */,
+				12A472D7276597439F74AB96 /* Pods-Trip Landmark Remark.release.xcconfig */,
+				C6F33666C1321FE5E5AF3ADA /* Pods-Trip Landmark RemarkTests.debug.xcconfig */,
+				E87D126FF14E894DE4943383 /* Pods-Trip Landmark RemarkTests.release.xcconfig */,
+				03360FD81A382E5E14FE35AB /* Pods-Trip Landmark RemarkUITests.debug.xcconfig */,
+				AC8F6655AC1DA54D1F48A07F /* Pods-Trip Landmark RemarkUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB54433B217D738F009C7AFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBB4938921800B1200F49970 /* ArrayWrapper.swift */,
+				EB544337217D7373009C7AFB /* User.swift */,
+				EB544339217D7381009C7AFB /* TripNote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB54437F217F5ABC009C7AFB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EBB4938E218013CD00F49970 /* Service */,
+				EBB4938B2180137E00F49970 /* Protocols */,
+				EBB4938D218013B200F49970 /* NetworkHandler */,
+				EBB4938C2180139D00F49970 /* Extensions */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EB544386217F6BBB009C7AFB /* CustomizedView */ = {
+			isa = PBXGroup;
+			children = (
+				EB544371217F088A009C7AFB /* TripNoteAnnotation.swift */,
+				EB544373217F1410009C7AFB /* TripNoteAnnotationView.swift */,
+				EB54436D217EC310009C7AFB /* TLPinView.swift */,
+				EB54436F217EC323009C7AFB /* TLPinView.xib */,
+				EB544380217F5E15009C7AFB /* TLFloatButton.swift */,
+			);
+			path = CustomizedView;
+			sourceTree = "<group>";
+		};
+		EB544389217F734A009C7AFB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EB54433C217D7828009C7AFB /* TLTheme.swift */,
+				EBB4939521801DED00F49970 /* Reusable.swift */,
+				EB54433E217D784A009C7AFB /* UIColor+HexString.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EB83D8162185E85A0005869D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EB5F84A0218401B900623CE4 /* LoginStoryboard.storyboard */,
+				EB5F849C2184002800623CE4 /* TLLoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EB83D8172185E8670005869D /* EnterTripNote */ = {
+			isa = PBXGroup;
+			children = (
+				EB83D81F2186108E0005869D /* Cell */,
+				EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */,
+				EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */,
+				EB544387217F6E31009C7AFB /* TripNote.storyboard */,
+			);
+			path = EnterTripNote;
+			sourceTree = "<group>";
+		};
+		EB83D8182185E8790005869D /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CC8D217B46BE0008787F /* Main.storyboard */,
+				EB544367217EC227009C7AFB /* TLMainMapViewController.swift */,
+				EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		EB83D81D218610420005869D /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				EB544386217F6BBB009C7AFB /* CustomizedView */,
+				EB83D8172185E8670005869D /* EnterTripNote */,
+				EB83D8182185E8790005869D /* HomePage */,
+				EB83D8162185E85A0005869D /* Login */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		EB83D81F2186108E0005869D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB544382217F6900009C7AFB /* UserInputTableViewCell.swift */,
+				EB544383217F6900009C7AFB /* UserInputTableViewCell.xib */,
+				EBB4939121801A0000F49970 /* ContentTableViewCell.swift */,
+				EBB4939221801A0000F49970 /* ContentTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EB91CC7D217B46BD0008787F = {
+			isa = PBXGroup;
+			children = (
+				EB91CC88217B46BD0008787F /* Trip Landmark Remark */,
+				EB91CCA0217B46BF0008787F /* Trip Landmark RemarkTests */,
+				EB91CCAB217B46BF0008787F /* Trip Landmark RemarkUITests */,
+				EB91CC87217B46BD0008787F /* Products */,
+				B51032F1DC593CDFFA058A75 /* Pods */,
+				55656A0FBD2430AE307DCB34 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EB91CC87217B46BD0008787F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CC86217B46BD0008787F /* Trip Landmark Remark.app */,
+				EB91CC9D217B46BF0008787F /* Trip Landmark RemarkTests.xctest */,
+				EB91CCA8217B46BF0008787F /* Trip Landmark RemarkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB91CC88217B46BD0008787F /* Trip Landmark Remark */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CC89217B46BE0008787F /* AppDelegate.swift */,
+				EB83D81B2185F4EE0005869D /* Coordinator.swift */,
+				EB83D8192185EC570005869D /* UserManager.swift */,
+				EB544389217F734A009C7AFB /* Utility */,
+				EB54437F217F5ABC009C7AFB /* Network */,
+				EB54433B217D738F009C7AFB /* Model */,
+				EB83D81D218610420005869D /* Pages */,
+				EB91CC93217B46BF0008787F /* Assets.xcassets */,
+				EB91CC95217B46BF0008787F /* LaunchScreen.storyboard */,
+				EB91CC98217B46BF0008787F /* Info.plist */,
+				EB5F849A21839D2500623CE4 /* GoogleService-Info.plist */,
+				EB91CC90217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld */,
+			);
+			path = "Trip Landmark Remark";
+			sourceTree = "<group>";
+		};
+		EB91CCA0217B46BF0008787F /* Trip Landmark RemarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CCA1217B46BF0008787F /* Trip_Landmark_RemarkTests.swift */,
+				EB91CCA3217B46BF0008787F /* Info.plist */,
+			);
+			path = "Trip Landmark RemarkTests";
+			sourceTree = "<group>";
+		};
+		EB91CCAB217B46BF0008787F /* Trip Landmark RemarkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CCAC217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift */,
+				EB91CCAE217B46BF0008787F /* Info.plist */,
+			);
+			path = "Trip Landmark RemarkUITests";
+			sourceTree = "<group>";
+		};
+		EBB4938B2180137E00F49970 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EB54437B217F499F009C7AFB /* NetworkRouter.swift */,
+				EB544340217D79E8009C7AFB /* EndPointType.swift */,
+				EB544342217D7DC0009C7AFB /* HTTPTask.swift */,
+				EB544375217F469B009C7AFB /* Parameter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EBB4938C2180139D00F49970 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBB49387218003A100F49970 /* HTTPURLResponseHandler.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EBB4938D218013B200F49970 /* NetworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				EB544377217F48C9009C7AFB /* URLParameterEncoder.swift */,
+				EB544379217F4933009C7AFB /* JSONParameterEncoder.swift */,
+				EB54437D217F4A3D009C7AFB /* Router.swift */,
+				EB54438E217F821D009C7AFB /* NetworkResponse.swift */,
+			);
+			path = NetworkHandler;
+			sourceTree = "<group>";
+		};
+		EBB4938E218013CD00F49970 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EB54438A217F7DD5009C7AFB /* TripNoteService.swift */,
+				EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB91CC85217B46BD0008787F /* Trip Landmark Remark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB91CCB1217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark Remark" */;
+			buildPhases = (
+				A565EE49CECCF0831E8E0D58 /* [CP] Check Pods Manifest.lock */,
+				EB91CC82217B46BD0008787F /* Sources */,
+				EB91CC83217B46BD0008787F /* Frameworks */,
+				EB91CC84217B46BD0008787F /* Resources */,
+				8C11D15D85267D4D7C102ACB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Trip Landmark Remark";
+			productName = "Trip Landmark Remark";
+			productReference = EB91CC86217B46BD0008787F /* Trip Landmark Remark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB91CC9C217B46BF0008787F /* Trip Landmark RemarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB91CCB4217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark RemarkTests" */;
+			buildPhases = (
+				CC4FE81887055D95814AAA54 /* [CP] Check Pods Manifest.lock */,
+				EB91CC99217B46BF0008787F /* Sources */,
+				EB91CC9A217B46BF0008787F /* Frameworks */,
+				EB91CC9B217B46BF0008787F /* Resources */,
+				32ADE0B9AA1E6185299FD287 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB91CC9F217B46BF0008787F /* PBXTargetDependency */,
+			);
+			name = "Trip Landmark RemarkTests";
+			productName = "Trip Landmark RemarkTests";
+			productReference = EB91CC9D217B46BF0008787F /* Trip Landmark RemarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB91CCA7217B46BF0008787F /* Trip Landmark RemarkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB91CCB7217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark RemarkUITests" */;
+			buildPhases = (
+				627BE58D070853015B849DE2 /* [CP] Check Pods Manifest.lock */,
+				EB91CCA4217B46BF0008787F /* Sources */,
+				EB91CCA5217B46BF0008787F /* Frameworks */,
+				EB91CCA6217B46BF0008787F /* Resources */,
+				AEF578E790B3060029BAD07E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB91CCAA217B46BF0008787F /* PBXTargetDependency */,
+			);
+			name = "Trip Landmark RemarkUITests";
+			productName = "Trip Landmark RemarkUITests";
+			productReference = EB91CCA8217B46BF0008787F /* Trip Landmark RemarkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB91CC7E217B46BD0008787F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = com.josee;
+				TargetAttributes = {
+					EB91CC85217B46BD0008787F = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					EB91CC9C217B46BF0008787F = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EB91CC85217B46BD0008787F;
+					};
+					EB91CCA7217B46BF0008787F = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EB91CC85217B46BD0008787F;
+					};
+				};
+			};
+			buildConfigurationList = EB91CC81217B46BD0008787F /* Build configuration list for PBXProject "Trip Landmark Remark" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB91CC7D217B46BD0008787F;
+			productRefGroup = EB91CC87217B46BD0008787F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB91CC85217B46BD0008787F /* Trip Landmark Remark */,
+				EB91CC9C217B46BF0008787F /* Trip Landmark RemarkTests */,
+				EB91CCA7217B46BF0008787F /* Trip Landmark RemarkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB91CC84217B46BD0008787F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB91CC97217B46BF0008787F /* LaunchScreen.storyboard in Resources */,
+				EB5F84A1218401B900623CE4 /* LoginStoryboard.storyboard in Resources */,
+				EB5F849B21839D2500623CE4 /* GoogleService-Info.plist in Resources */,
+				EBB4939421801A0000F49970 /* ContentTableViewCell.xib in Resources */,
+				EB544385217F6900009C7AFB /* UserInputTableViewCell.xib in Resources */,
+				EB544370217EC323009C7AFB /* TLPinView.xib in Resources */,
+				EB91CC94217B46BF0008787F /* Assets.xcassets in Resources */,
+				EB544388217F6E31009C7AFB /* TripNote.storyboard in Resources */,
+				EB91CC8F217B46BE0008787F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CC9B217B46BF0008787F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CCA6217B46BF0008787F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32ADE0B9AA1E6185299FD287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark RemarkTests/Pods-Trip Landmark RemarkTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark RemarkTests/Pods-Trip Landmark RemarkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		627BE58D070853015B849DE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trip Landmark RemarkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C11D15D85267D4D7C102ACB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark Remark/Pods-Trip Landmark Remark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark Remark/Pods-Trip Landmark Remark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A565EE49CECCF0831E8E0D58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trip Landmark Remark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF578E790B3060029BAD07E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark RemarkUITests/Pods-Trip Landmark RemarkUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Trip Landmark RemarkUITests/Pods-Trip Landmark RemarkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC4FE81887055D95814AAA54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Trip Landmark RemarkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB91CC82217B46BD0008787F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB544381217F5E15009C7AFB /* TLFloatButton.swift in Sources */,
+				EB544374217F1410009C7AFB /* TripNoteAnnotationView.swift in Sources */,
+				EB544341217D79E8009C7AFB /* EndPointType.swift in Sources */,
+				EB54433A217D7381009C7AFB /* TripNote.swift in Sources */,
+				EB54438D217F8066009C7AFB /* TripNoteEndpoint.swift in Sources */,
+				EBB4938A21800B1200F49970 /* ArrayWrapper.swift in Sources */,
+				EBB49388218003A100F49970 /* HTTPURLResponseHandler.swift in Sources */,
+				EB544338217D7373009C7AFB /* User.swift in Sources */,
+				EB5F849E2184002800623CE4 /* TLLoginViewController.swift in Sources */,
+				EB544343217D7DC0009C7AFB /* HTTPTask.swift in Sources */,
+				EB54436E217EC310009C7AFB /* TLPinView.swift in Sources */,
+				EB544384217F6900009C7AFB /* UserInputTableViewCell.swift in Sources */,
+				EBB4939321801A0000F49970 /* ContentTableViewCell.swift in Sources */,
+				EB54437E217F4A3D009C7AFB /* Router.swift in Sources */,
+				EB544376217F469B009C7AFB /* Parameter.swift in Sources */,
+				EB544372217F088A009C7AFB /* TripNoteAnnotation.swift in Sources */,
+				EB83D81C2185F4EF0005869D /* Coordinator.swift in Sources */,
+				EB544378217F48C9009C7AFB /* URLParameterEncoder.swift in Sources */,
+				EBB493902180184500F49970 /* TLUserNoteViewModel.swift in Sources */,
+				EB91CC8A217B46BE0008787F /* AppDelegate.swift in Sources */,
+				EB91CC92217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld in Sources */,
+				EB54433D217D7828009C7AFB /* TLTheme.swift in Sources */,
+				EB54433F217D784B009C7AFB /* UIColor+HexString.swift in Sources */,
+				EB54438F217F821D009C7AFB /* NetworkResponse.swift in Sources */,
+				EB83D81A2185EC570005869D /* UserManager.swift in Sources */,
+				EB544365217EC20F009C7AFB /* TLUserNoteViewController.swift in Sources */,
+				EB54437A217F4933009C7AFB /* JSONParameterEncoder.swift in Sources */,
+				EB544369217EC227009C7AFB /* TLMainMapViewController.swift in Sources */,
+				EB54436C217EC29C009C7AFB /* TLMainMapViewModel.swift in Sources */,
+				EBB4939621801DED00F49970 /* Reusable.swift in Sources */,
+				EB54438B217F7DD5009C7AFB /* TripNoteService.swift in Sources */,
+				EB54437C217F499F009C7AFB /* NetworkRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CC99217B46BF0008787F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB91CCA2217B46BF0008787F /* Trip_Landmark_RemarkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB91CCA4217B46BF0008787F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB91CCAD217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB91CC9F217B46BF0008787F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB91CC85217B46BD0008787F /* Trip Landmark Remark */;
+			targetProxy = EB91CC9E217B46BF0008787F /* PBXContainerItemProxy */;
+		};
+		EB91CCAA217B46BF0008787F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB91CC85217B46BD0008787F /* Trip Landmark Remark */;
+			targetProxy = EB91CCA9217B46BF0008787F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB91CC8D217B46BE0008787F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB91CC8E217B46BE0008787F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB91CC95217B46BF0008787F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB91CC96217B46BF0008787F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB91CCAF217B46BF0008787F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EB91CCB0217B46BF0008787F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB91CCB2217B46BF0008787F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E61EF1673CA34152B8A5B0 /* Pods-Trip Landmark Remark.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = "Trip Landmark Remark/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-Remark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Development_TripLandMarks;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EB91CCB3217B46BF0008787F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A472D7276597439F74AB96 /* Pods-Trip Landmark Remark.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 53PCKL938K;
+				INFOPLIST_FILE = "Trip Landmark Remark/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-Remark";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Distribution_TripLandMarks;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EB91CCB5217B46BF0008787F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6F33666C1321FE5E5AF3ADA /* Pods-Trip Landmark RemarkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R2QCX6BSC;
+				INFOPLIST_FILE = "Trip Landmark RemarkTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-RemarkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trip Landmark Remark.app/Trip Landmark Remark";
+			};
+			name = Debug;
+		};
+		EB91CCB6217B46BF0008787F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E87D126FF14E894DE4943383 /* Pods-Trip Landmark RemarkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R2QCX6BSC;
+				INFOPLIST_FILE = "Trip Landmark RemarkTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-RemarkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trip Landmark Remark.app/Trip Landmark Remark";
+			};
+			name = Release;
+		};
+		EB91CCB8217B46BF0008787F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03360FD81A382E5E14FE35AB /* Pods-Trip Landmark RemarkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R2QCX6BSC;
+				INFOPLIST_FILE = "Trip Landmark RemarkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-RemarkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Trip Landmark Remark";
+			};
+			name = Debug;
+		};
+		EB91CCB9217B46BF0008787F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC8F6655AC1DA54D1F48A07F /* Pods-Trip Landmark RemarkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R2QCX6BSC;
+				INFOPLIST_FILE = "Trip Landmark RemarkUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josee.Trip-Landmark-RemarkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Trip Landmark Remark";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB91CC81217B46BD0008787F /* Build configuration list for PBXProject "Trip Landmark Remark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB91CCAF217B46BF0008787F /* Debug */,
+				EB91CCB0217B46BF0008787F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB91CCB1217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark Remark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB91CCB2217B46BF0008787F /* Debug */,
+				EB91CCB3217B46BF0008787F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB91CCB4217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark RemarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB91CCB5217B46BF0008787F /* Debug */,
+				EB91CCB6217B46BF0008787F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB91CCB7217B46BF0008787F /* Build configuration list for PBXNativeTarget "Trip Landmark RemarkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB91CCB8217B46BF0008787F /* Debug */,
+				EB91CCB9217B46BF0008787F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB91CC90217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB91CC91217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodel */,
+			);
+			currentVersion = EB91CC91217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodel */;
+			path = Trip_Landmark_Remark.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EB91CC7E217B46BD0008787F /* Project object */;
+}

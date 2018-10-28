@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwg-vC-BYv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Wex-4x-Edw">
+            <objects>
+                <viewController storyboardIdentifier="TLLoginViewController" id="cwg-vC-BYv" customClass="TLLoginViewController" customModule="Trip_Landmark_Remark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ikl-sj-I8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImge" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-ob-IaH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientWhite" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-D8-qjq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cs-ov-iEL" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="95" y="474" width="185" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Oh-D8-qjq" firstAttribute="leading" secondItem="PIa-7G-tJs" secondAttribute="leading" id="0Ux-wf-swC"/>
+                            <constraint firstItem="MgL-ob-IaH" firstAttribute="trailing" secondItem="PIa-7G-tJs" secondAttribute="trailing" id="3dC-mu-Pm5"/>
+                            <constraint firstItem="MgL-ob-IaH" firstAttribute="bottom" secondItem="PIa-7G-tJs" secondAttribute="bottom" id="5gY-hV-dkd"/>
+                            <constraint firstItem="0Oh-D8-qjq" firstAttribute="top" secondItem="ikl-sj-I8B" secondAttribute="top" id="8CN-37-Fh9"/>
+                            <constraint firstItem="PIa-7G-tJs" firstAttribute="trailing" secondItem="0Oh-D8-qjq" secondAttribute="trailing" id="DlT-f9-Gjd"/>
+                            <constraint firstItem="PIa-7G-tJs" firstAttribute="bottom" secondItem="0Oh-D8-qjq" secondAttribute="bottom" id="JU1-E7-WUf"/>
+                            <constraint firstItem="MgL-ob-IaH" firstAttribute="leading" secondItem="PIa-7G-tJs" secondAttribute="leading" id="dDw-Os-Fhd"/>
+                            <constraint firstItem="MgL-ob-IaH" firstAttribute="top" secondItem="ikl-sj-I8B" secondAttribute="top" id="rVr-nw-kob"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PIa-7G-tJs"/>
+                    </view>
+                    <connections>
+                        <outlet property="fbLoginButton" destination="1cs-ov-iEL" id="d5f-Gg-okY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JM0-Pz-cK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="-188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gradientWhite" width="375" height="667"/>
+        <image name="launchImge" width="683" height="1024"/>
+    </resources>
+</document>
