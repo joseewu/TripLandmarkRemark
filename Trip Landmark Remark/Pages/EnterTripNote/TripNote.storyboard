@@ -25,10 +25,13 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhw-Rn-mRz">
                                 <rect key="frame" x="80" y="523" width="215" height="44"/>
+                                <color key="backgroundColor" red="0.93042421340942383" green="0.43123656511306763" blue="0.040345337241888046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Zbm-w6-G6g"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Send Note!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="sendNote:" destination="OwE-zZ-Fth" eventType="touchUpInside" id="N5c-iC-Dfe"/>
                                 </connections>

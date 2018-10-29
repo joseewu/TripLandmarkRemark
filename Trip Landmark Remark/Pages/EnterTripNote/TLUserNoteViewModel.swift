@@ -20,6 +20,6 @@ class TLUserNoteViewModel {
         self.cellTypes = cellTypes
     }
     func sendUserNote(_ tripNote:TripNote) {
-
+        service.postTripNote(tripNote)
     }
 }

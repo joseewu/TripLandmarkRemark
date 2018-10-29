@@ -19,14 +19,6 @@ class UserInputTableViewCell: UITableViewCell {
     private func renderUi() {
         backgroundColor = UIColor("#FFF5C6")
         selectionStyle = .none
-        note.delegate = self
     }
 }
-extension UserInputTableViewCell:UITextViewDelegate {
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        if textView.text == "input..." {
-            textView.text = ""
-        }
-        return true
-    }
-}
+

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class TLUserNoteViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
@@ -21,18 +22,33 @@ class TLUserNoteViewController: UIViewController {
         }
     }
     @IBOutlet weak var sendButton: UIButton!
-    private var userNote:TripNote?
+    internal var assitantView:UIView = UIView()
+    internal var userNote:TripNote?
     internal var viewModel:TLUserNoteViewModel!
+    public var currentLocation:CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
+        assitantView.backgroundColor = UIColor.clear
+        assitantView.frame = view.frame
+        assitantView.isHidden = true
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TLUserNoteViewController.didEndEditing))
+        assitantView.addGestureRecognizer(tapGesture)
+        view.addSubview(assitantView)
+        sendButton.layer.cornerRadius = 6
+        sendButton.clipsToBounds = true
         let service = TripNoteService()
-        userNote = TripNote(locationName: nil, userId: nil, latitude: nil, longitude: nil, note: nil)
-        userNote?.locationName = "fjisfj"
-        let cellTypes:[TLUserNotePageCellType] = [.name(title: "Name", name: nil), .location(location: ("", "")),.note(title: "YourNote!", note: nil)]
+        userNote = TripNote(locationName: nil, userId: nil, latitude: currentLocation?.latitude, longitude: currentLocation?.longitude, note: nil)
+        let cellTypes:[TLUserNotePageCellType] = [.name(title: "Name", name: "ocation"), .location(location: ("\(currentLocation?.latitude ?? 0)", "\(currentLocation?.longitude ?? 0)")),.note(title: "YourNote!", note: nil)]
         viewModel = TLUserNoteViewModel(with: service, cellTypes)
     }
+    @objc private func didEndEditing() {
+        assitantView.isHidden = true
+        view.endEditing(true)
+    }
     @IBAction func sendNote(_ sender: Any) {
-//        viewModel.sendUserNote(TripNote(locationName: <#T##String?#>, userId: <#T##Int?#>, latitude: <#T##Double?#>, longitude: <#T##Double?#>, note: <#T##String?#>))
+        guard let userNote = userNote else {return}
+        viewModel.sendUserNote(userNote)
+        navigationController?.popViewController(animated: true)
     }
 
 }
@@ -48,21 +64,53 @@ extension TLUserNoteViewController:UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         switch cellType {
-        case .name(let title, let name):
+        case .name(let _, let name):
             let cell:ContentTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.name.text = title
+            cell.name.text = "where are you"
+            cell.name.tag = indexPath.row
+            cell.userInput.delegate = self
             return cell
         case .note(let title, let _):
             let cell:UserInputTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.note.delegate = self
             cell.title.text = title
             return cell
         case .location(let location):
             let cell:ContentTableViewCell = tableView.dequeueReusableCell(for: indexPath)
             cell.name.text = "where are you"
+            cell.userInput.delegate = self
             cell.userInput.placeholder = "location.."
+            cell.userInput.tag = indexPath.row
+            cell.userInput.text = "\(location.0),\(location.1)"
             return cell
         }
     }
+}
+extension TLUserNoteViewController:UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        userNote?.note = textView.text
 
-
+    }
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        assitantView.isHidden = false
+        if textView.text == "input..." {
+            textView.text = ""
+        }
+        return true
+    }
+}
+extension TLUserNoteViewController:UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        assitantView.isHidden = false
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.tag {
+        case 1:
+            break
+        case 0:
+            userNote?.locationName = textField.text
+        default:
+            break
+        }
+    }
 }

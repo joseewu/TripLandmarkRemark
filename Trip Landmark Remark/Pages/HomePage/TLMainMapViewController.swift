@@ -46,7 +46,6 @@ class TLMainMapViewController: UIViewController {
         renderUI()
         let service = TripNoteService()
         viewModel = TLMainMapViewModel(with: service)
-        viewModel?.addNote()
         viewModel?.getAllNotes()
         viewModel?.update = {[weak self] data in
             if let data = data {
@@ -88,6 +87,12 @@ class TLMainMapViewController: UIViewController {
     guard let currentLocation = initialLocation else {
     return
     }
+        let myLocaion = mapView.annotations.filter { (item) -> Bool in
+            return item.isKind(of: TripNoteAnnotation.self)
+        }
+        if let myLocationAnnotation = myLocaion.first as? TripNoteAnnotation {
+            mapView.removeAnnotation(myLocationAnnotation)
+        }
     let noteTest = TripNote(locationName: "", userId: 1, latitude: currentLocation.latitude, longitude: currentLocation.longitude, note: "")
     let annotationImage = UIImage(named:"currentLocationPin")?.withRenderingMode(.alwaysTemplate)
     let noteAnnotation = TripNoteAnnotation(note: noteTest, annotationImg: annotationImage)
@@ -107,6 +112,17 @@ class TLMainMapViewController: UIViewController {
     private func startTrackUser() {
         locationManager.startUpdatingLocation()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        switch identifier {
+        case "ShowTripNotePage":
+            if let vc = segue.destination as? TLUserNoteViewController {
+                vc.currentLocation = initialLocation
+            }
+        default:
+            break
+        }
+    }
 }
 extension TLMainMapViewController:CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -116,6 +132,7 @@ extension TLMainMapViewController:CLLocationManagerDelegate {
         }
     }
 }
+
 extension TLMainMapViewController:MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if #available(iOS 11.0, *) {

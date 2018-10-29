@@ -22,11 +22,9 @@ class TLMainMapViewModel {
         self.service = service
     }
     func getAllNotes() {
-        service.getAllTripNote { (_, _) in
-            
+        service.getAllTripNote {  (resuts, _) in
+            self.tripNotes = resuts ?? [TripNote]()
+            self.update?(resuts)
         }
-    }
-    func addNote() {
-        service.postTripNote()
     }
 }
