@@ -53,6 +53,8 @@
 		EBB4939321801A0000F49970 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4939121801A0000F49970 /* ContentTableViewCell.swift */; };
 		EBB4939421801A0000F49970 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB4939221801A0000F49970 /* ContentTableViewCell.xib */; };
 		EBB4939621801DED00F49970 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4939521801DED00F49970 /* Reusable.swift */; };
+		EBBE95B62188446D00C19189 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE95B52188446D00C19189 /* Dependency.swift */; };
+		EBBE95B8218844D100C19189 /* Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBE95B7218844D100C19189 /* Bindings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		EBB4939121801A0000F49970 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		EBB4939221801A0000F49970 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
 		EBB4939521801DED00F49970 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		EBBE95B52188446D00C19189 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		EBBE95B7218844D100C19189 /* Bindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +315,7 @@
 				EB54437F217F5ABC009C7AFB /* Network */,
 				EB54433B217D738F009C7AFB /* Model */,
 				EB83D81D218610420005869D /* Pages */,
+				EBBE95B9218844D900C19189 /* ViewModelProtocol */,
 				EB91CC93217B46BF0008787F /* Assets.xcassets */,
 				EB91CC95217B46BF0008787F /* LaunchScreen.storyboard */,
 				EB91CC98217B46BF0008787F /* Info.plist */,
@@ -375,6 +380,15 @@
 				EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		EBBE95B9218844D900C19189 /* ViewModelProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE95B52188446D00C19189 /* Dependency.swift */,
+				EBBE95B7218844D100C19189 /* Bindings.swift */,
+			);
+			path = ViewModelProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,6 +711,7 @@
 				EB54433A217D7381009C7AFB /* TripNote.swift in Sources */,
 				EB54438D217F8066009C7AFB /* TripNoteEndpoint.swift in Sources */,
 				EBB4938A21800B1200F49970 /* ArrayWrapper.swift in Sources */,
+				EBBE95B62188446D00C19189 /* Dependency.swift in Sources */,
 				EBB49388218003A100F49970 /* HTTPURLResponseHandler.swift in Sources */,
 				EB544338217D7373009C7AFB /* User.swift in Sources */,
 				EB5F849E2184002800623CE4 /* TLLoginViewController.swift in Sources */,
@@ -717,6 +732,7 @@
 				EB54438F217F821D009C7AFB /* NetworkResponse.swift in Sources */,
 				EB83D81A2185EC570005869D /* UserManager.swift in Sources */,
 				EB544365217EC20F009C7AFB /* TLUserNoteViewController.swift in Sources */,
+				EBBE95B8218844D100C19189 /* Bindings.swift in Sources */,
 				EB54437A217F4933009C7AFB /* JSONParameterEncoder.swift in Sources */,
 				EB544369217EC227009C7AFB /* TLMainMapViewController.swift in Sources */,
 				EB54436C217EC29C009C7AFB /* TLMainMapViewModel.swift in Sources */,

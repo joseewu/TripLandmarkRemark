@@ -10,7 +10,19 @@ import Foundation
 import CoreLocation
 
 public typealias BindinfAction<T:Codable> = (_ data: T?) -> ()
-class TLMainMapViewModel {
+class TLMainMapViewModel:Dependency,Bindings {
+    var output: TLMainMapViewModel.Output!
+
+    func bind(with input: TLMainMapViewModel.Input) {
+
+    }
+
+    struct Output {
+
+    }
+    struct Input {
+        
+    }
     public var tripNotes:[TripNote] = [TripNote]() {
         didSet {
             update?(tripNotes)
@@ -18,7 +30,8 @@ class TLMainMapViewModel {
     }
     public var update:BindinfAction<[TripNote]>?
     private let service:TripNoteService
-    init(with service:TripNoteService) {
+
+    required init(with service:TripNoteService) {
         self.service = service
     }
     func getAllNotes() {

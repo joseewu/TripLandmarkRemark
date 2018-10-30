@@ -9,7 +9,13 @@
 import Foundation
 import FirebaseDatabase
 //buid my service base on the network/ endpoint type protocol
-struct TripNoteService {
+protocol ServiceConnection {
+    associatedtype Endpoint:EndPointType
+    var enviroment:NetworkEnvironment{get}
+    var router:Router<Endpoint>{get}
+}
+struct TripNoteService:ServiceConnection {
+    var enviroment: NetworkEnvironment = .production
     static let environment : NetworkEnvironment = .production
     let router = Router<TripNoteApi>()
     var ref: DatabaseReference = Database.database().reference()
