@@ -3,7 +3,7 @@
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
-
+*.xcuserstate
 # Swift Package Manager
 
 .build/
