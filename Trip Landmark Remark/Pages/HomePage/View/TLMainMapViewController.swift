@@ -33,26 +33,23 @@ class TLMainMapViewController: UIViewController {
             floatyButton.iconImg = UIImage(named: "plus_icon")?.withRenderingMode(.alwaysTemplate)
         }
     }
+    var presentor:TLMainMapPresentor?
     private let locationManager:CLLocationManager = CLLocationManager()
-    private var viewModel:TLMainMapViewModel?
     internal var initialLocation:CLLocationCoordinate2D? {
         didSet{
-//            UserManager.shared.user?.currentLocation = ("\(initialLocation?.latitude)","\(initialLocation?.longitude)")
             moveToUserLocation()
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         renderUI()
-        let service = TripNoteService()
-        viewModel = TLMainMapViewModel(with: service)
-        viewModel?.getAllNotes()
-        viewModel?.update = {[weak self] data in
-            if let data = data {
-                self?.addAnnotation(data)
-            }
-        }
         setLocationManager()
+        presentor = TLMainMapPresentor(with: self)
+        presentor?.success = { [weak self] (result) in
+            guard let allAnnotation = result as? [MKAnnotation] else {return}
+            self?.mapView.addAnnotations(allAnnotation)
+        }
+        let service = TripNoteService()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -71,7 +68,7 @@ class TLMainMapViewController: UIViewController {
         self.title = "Trip landmark remark!"
     }
     @IBAction func addNote(_ sender: Any) {
-        performSegue(withIdentifier: "ShowTripNotePage", sender: 2)
+        presentor?.didTapButton()
     }
     private func moveToUserLocation() {
         guard let currentLocation = initialLocation else {
@@ -93,35 +90,10 @@ class TLMainMapViewController: UIViewController {
         if let myLocationAnnotation = myLocaion.first as? TripNoteAnnotation {
             mapView.removeAnnotation(myLocationAnnotation)
         }
-    let noteTest = TripNote(locationName: "", userId: 1, latitude: currentLocation.latitude, longitude: currentLocation.longitude, note: "")
+    let noteTest = MDTripNoteAnnotaion(with: nil, location: (currentLocation.latitude, currentLocation.longitude))
     let annotationImage = UIImage(named:"currentLocationPin")?.withRenderingMode(.alwaysTemplate)
     let noteAnnotation = TripNoteAnnotation(note: noteTest, annotationImg: annotationImage)
     mapView.addAnnotation(noteAnnotation)
-    }
-    private func addAnnotation(_ notes:[TripNote]) {
-        var annotations:[MKAnnotation] = [MKAnnotation]()
-        for note in notes {
-            let tripNote = TripNote(locationName:note.locationName, userId: note.userId, latitude: note.latitude, longitude: note.longitude, note: note.note)
-            let annotationImage = UIImage(named: "coffeePin")?.withRenderingMode(.alwaysTemplate)
-            let noteAnnotation = TripNoteAnnotation(note: tripNote, annotationImg: annotationImage)
-            annotations.append(noteAnnotation)
-        }
-        mapView.addAnnotations(annotations)
-    }
-    
-    private func startTrackUser() {
-        locationManager.startUpdatingLocation()
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else {return}
-        switch identifier {
-        case "ShowTripNotePage":
-            if let vc = segue.destination as? TLUserNoteViewController {
-                vc.currentLocation = initialLocation
-            }
-        default:
-            break
-        }
     }
 }
 extension TLMainMapViewController:CLLocationManagerDelegate {
@@ -148,7 +120,6 @@ extension TLMainMapViewController:MKMapViewDelegate{
                 // 5
                 view = TripNoteAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.tintColor = UIColor.purple
-                //view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             }
             return view
 

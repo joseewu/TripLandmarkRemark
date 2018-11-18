@@ -21,10 +21,16 @@ class TLUserNoteViewController: UIViewController {
             tableView.dataSource = self
         }
     }
-    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton! {
+        didSet {
+            sendButton.layer.cornerRadius = 6
+            sendButton.clipsToBounds = true
+        }
+    }
     internal var assitantView:UIView = UIView()
-    internal var userNote:TripNote?
+    internal var userNote:MDTripNoteAnnotaion?
     internal var viewModel:TLUserNoteViewModel!
+    weak var prsentor:TLUserNotePresentor?
     public var currentLocation:CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +40,8 @@ class TLUserNoteViewController: UIViewController {
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TLUserNoteViewController.didEndEditing))
         assitantView.addGestureRecognizer(tapGesture)
         view.addSubview(assitantView)
-        sendButton.layer.cornerRadius = 6
-        sendButton.clipsToBounds = true
-        let service = TripNoteService()
-        userNote = TripNote(locationName: nil, userId: nil, latitude: currentLocation?.latitude, longitude: currentLocation?.longitude, note: nil)
-        let cellTypes:[TLUserNotePageCellType] = [.name(title: "Name", name: "ocation"), .location(location: ("\(currentLocation?.latitude ?? 0)", "\(currentLocation?.longitude ?? 0)")),.note(title: "YourNote!", note: nil)]
-        viewModel = TLUserNoteViewModel(with: service, cellTypes)
+        userNote = MDTripNoteAnnotaion(with: nil, location: (currentLocation?.latitude ?? 0, currentLocation?.longitude ?? 0))
+    
     }
     @objc private func didEndEditing() {
         assitantView.isHidden = true
@@ -47,14 +49,13 @@ class TLUserNoteViewController: UIViewController {
     }
     @IBAction func sendNote(_ sender: Any) {
         guard let userNote = userNote else {return}
-        viewModel.sendUserNote(userNote)
-        navigationController?.popViewController(animated: true)
+        prsentor?.didSendReport()
     }
 
 }
 extension TLUserNoteViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cellTypes?.count ?? 0
+        return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,7 +89,7 @@ extension TLUserNoteViewController:UITableViewDelegate, UITableViewDataSource {
 }
 extension TLUserNoteViewController:UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
-        userNote?.note = textView.text
+        userNote?.updateNote(textView.text)
 
     }
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
@@ -108,7 +109,7 @@ extension TLUserNoteViewController:UITextFieldDelegate {
         case 1:
             break
         case 0:
-            userNote?.locationName = textField.text
+            userNote?.updateLocationName(textField.text)
         default:
             break
         }

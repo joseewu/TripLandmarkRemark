@@ -16,7 +16,7 @@ class TripNoteAnnotation:NSObject,MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     private let image:UIImage?
     let color:UIColor = MainColors.TLCoffee
-    init(note:TripNote, annotationImg:UIImage?) {
+    init(note:MDTripNoteAnnotaion, annotationImg:UIImage?) {
         self.title = note.locationName
         self.userId = note.userId
         self.noteContent = note.note
