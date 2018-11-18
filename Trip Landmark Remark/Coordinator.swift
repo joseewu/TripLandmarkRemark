@@ -14,10 +14,8 @@ class Coordinator {
     let userState = UserManager.shared.isUserLogin
     func updateRootViewController() {
         if userState {
-             let rootStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let rootVC = rootStoryboard.instantiateViewController(withIdentifier: "BaseNavigationViewController")
-            appDelegate?.window??.rootViewController = rootVC
-
+             let VC = TLMainMapRouter.setupModule()
+            appDelegate?.window??.rootViewController = VC
         } else {
             let rootStoryboard:UIStoryboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
             let loginVC = rootStoryboard.instantiateViewController(withIdentifier: "TLLoginViewController")

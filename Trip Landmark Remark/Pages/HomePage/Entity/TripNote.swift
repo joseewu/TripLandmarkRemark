@@ -2,12 +2,13 @@
 //  TripNote.swift
 //  Trip Landmark Remark
 //
-//  Created by joseewu on 2018/10/22.
+//  Created by joseewu on 2018/11/18.
 //  Copyright © 2018 com.josee. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
+
 struct TripNote:Codable {
     internal enum CodingKeys:String,CodingKey {
         case locationName
@@ -17,27 +18,23 @@ struct TripNote:Codable {
         case longitude
         case note
     }
+
     internal(set) var locationName:String?
     let userId:Int?
     let noteId:Int?
-    internal(set) var latitude:Double?
-    internal(set) var longitude:Double?
+    let latitude:Double?
+    let longitude:Double?
     internal(set) var note:String?
-    mutating func updateNote(_ note:String?) {
-        self.note = note
+
+    init(with note:MDTripNoteAnnotaion) {
+        self.locationName = note.locationName
+        self.userId = note.userId
+        self.latitude = note.latitude
+        self.longitude = note.longitude
+        self.note = note.note
+        self.noteId = note.noteId
     }
-    mutating func updateLocation(_ location:CLLocationCoordinate2D?) {
-        self.latitude = location?.latitude
-        self.longitude = location?.longitude
-    }
-    init(locationName:String?, userId:Int?, latitude:Double?, longitude:Double?, note:String?) {
-        self.locationName = locationName
-        self.userId = userId
-        self.latitude = latitude
-        self.longitude = longitude
-        self.note = note
-        self.noteId = 0
-    }
+
 }
 extension TripNote {
     init(from decoder: Decoder) throws {

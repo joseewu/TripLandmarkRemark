@@ -11,14 +11,12 @@
 		9F4EDCCE356B3AF670452702 /* Pods_Trip_Landmark_Remark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5E9F91122805797715863D /* Pods_Trip_Landmark_Remark.framework */; };
 		C94A27874EEE894810EA76D6 /* Pods_Trip_Landmark_RemarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACC250C7E61AC6435127589 /* Pods_Trip_Landmark_RemarkUITests.framework */; };
 		EB544338217D7373009C7AFB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544337217D7373009C7AFB /* User.swift */; };
-		EB54433A217D7381009C7AFB /* TripNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544339217D7381009C7AFB /* TripNote.swift */; };
 		EB54433D217D7828009C7AFB /* TLTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54433C217D7828009C7AFB /* TLTheme.swift */; };
 		EB54433F217D784B009C7AFB /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54433E217D784A009C7AFB /* UIColor+HexString.swift */; };
 		EB544341217D79E8009C7AFB /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544340217D79E8009C7AFB /* EndPointType.swift */; };
 		EB544343217D7DC0009C7AFB /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544342217D7DC0009C7AFB /* HTTPTask.swift */; };
 		EB544365217EC20F009C7AFB /* TLUserNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */; };
 		EB544369217EC227009C7AFB /* TLMainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544367217EC227009C7AFB /* TLMainMapViewController.swift */; };
-		EB54436C217EC29C009C7AFB /* TLMainMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */; };
 		EB54436E217EC310009C7AFB /* TLPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54436D217EC310009C7AFB /* TLPinView.swift */; };
 		EB544370217EC323009C7AFB /* TLPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB54436F217EC323009C7AFB /* TLPinView.xib */; };
 		EB544372217F088A009C7AFB /* TripNoteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544371217F088A009C7AFB /* TripNoteAnnotation.swift */; };
@@ -35,6 +33,9 @@
 		EB54438B217F7DD5009C7AFB /* TripNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438A217F7DD5009C7AFB /* TripNoteService.swift */; };
 		EB54438D217F8066009C7AFB /* TripNoteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */; };
 		EB54438F217F821D009C7AFB /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB54438E217F821D009C7AFB /* NetworkResponse.swift */; };
+		EB55411F21A145C8000ADDA8 /* TLMainMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB55411E21A145C8000ADDA8 /* TLMainMapViewController.storyboard */; };
+		EB55412121A1485E000ADDA8 /* TripNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55412021A1485E000ADDA8 /* TripNote.swift */; };
+		EB55412521A14B2C000ADDA8 /* MDTripNoteAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB55412421A14B2C000ADDA8 /* MDTripNoteAnnotaion.swift */; };
 		EB5F849B21839D2500623CE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB5F849A21839D2500623CE4 /* GoogleService-Info.plist */; };
 		EB5F849E2184002800623CE4 /* TLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5F849C2184002800623CE4 /* TLLoginViewController.swift */; };
 		EB5F84A1218401B900623CE4 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB5F84A0218401B900623CE4 /* LoginStoryboard.storyboard */; };
@@ -47,6 +48,13 @@
 		EB91CC97217B46BF0008787F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB91CC95217B46BF0008787F /* LaunchScreen.storyboard */; };
 		EB91CCA2217B46BF0008787F /* Trip_Landmark_RemarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91CCA1217B46BF0008787F /* Trip_Landmark_RemarkTests.swift */; };
 		EB91CCAD217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91CCAC217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift */; };
+		EBB41BE321A0EEBE00EEAB0F /* TLMainMapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BE221A0EEBE00EEAB0F /* TLMainMapInteractor.swift */; };
+		EBB41BE521A0EED600EEAB0F /* TLMainMapPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BE421A0EED600EEAB0F /* TLMainMapPresentor.swift */; };
+		EBB41BE921A0EEF200EEAB0F /* TLMainMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BE821A0EEF200EEAB0F /* TLMainMapRouter.swift */; };
+		EBB41BEB21A0F8E400EEAB0F /* TLUserNotePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BEA21A0F8E400EEAB0F /* TLUserNotePresentor.swift */; };
+		EBB41BED21A0F8EF00EEAB0F /* TLUserNoteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BEC21A0F8EF00EEAB0F /* TLUserNoteInteractor.swift */; };
+		EBB41BEF21A0F8FD00EEAB0F /* TLUserNoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BEE21A0F8FD00EEAB0F /* TLUserNoteEntity.swift */; };
+		EBB41BF121A0F90600EEAB0F /* TLUserNoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB41BF021A0F90600EEAB0F /* TLUserNoteRouter.swift */; };
 		EBB49388218003A100F49970 /* HTTPURLResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB49387218003A100F49970 /* HTTPURLResponseHandler.swift */; };
 		EBB4938A21800B1200F49970 /* ArrayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4938921800B1200F49970 /* ArrayWrapper.swift */; };
 		EBB493902180184500F49970 /* TLUserNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */; };
@@ -85,14 +93,12 @@
 		DACC250C7E61AC6435127589 /* Pods_Trip_Landmark_RemarkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trip_Landmark_RemarkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87D126FF14E894DE4943383 /* Pods-Trip Landmark RemarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trip Landmark RemarkTests.release.xcconfig"; path = "Target Support Files/Pods-Trip Landmark RemarkTests/Pods-Trip Landmark RemarkTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB544337217D7373009C7AFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		EB544339217D7381009C7AFB /* TripNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNote.swift; sourceTree = "<group>"; };
 		EB54433C217D7828009C7AFB /* TLTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLTheme.swift; sourceTree = "<group>"; };
 		EB54433E217D784A009C7AFB /* UIColor+HexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
 		EB544340217D79E8009C7AFB /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		EB544342217D7DC0009C7AFB /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteViewController.swift; sourceTree = "<group>"; };
 		EB544367217EC227009C7AFB /* TLMainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapViewController.swift; sourceTree = "<group>"; };
-		EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapViewModel.swift; sourceTree = "<group>"; };
 		EB54436D217EC310009C7AFB /* TLPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLPinView.swift; sourceTree = "<group>"; };
 		EB54436F217EC323009C7AFB /* TLPinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLPinView.xib; sourceTree = "<group>"; };
 		EB544371217F088A009C7AFB /* TripNoteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteAnnotation.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 		EB54438A217F7DD5009C7AFB /* TripNoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteService.swift; sourceTree = "<group>"; };
 		EB54438C217F8066009C7AFB /* TripNoteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteEndpoint.swift; sourceTree = "<group>"; };
 		EB54438E217F821D009C7AFB /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		EB55411E21A145C8000ADDA8 /* TLMainMapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TLMainMapViewController.storyboard; sourceTree = "<group>"; };
+		EB55412021A1485E000ADDA8 /* TripNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNote.swift; sourceTree = "<group>"; };
+		EB55412421A14B2C000ADDA8 /* MDTripNoteAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDTripNoteAnnotaion.swift; sourceTree = "<group>"; };
 		EB5F849A21839D2500623CE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EB5F849C2184002800623CE4 /* TLLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLLoginViewController.swift; sourceTree = "<group>"; };
 		EB5F84A0218401B900623CE4 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
@@ -127,6 +136,13 @@
 		EB91CCA8217B46BF0008787F /* Trip Landmark RemarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trip Landmark RemarkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB91CCAC217B46BF0008787F /* Trip_Landmark_RemarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip_Landmark_RemarkUITests.swift; sourceTree = "<group>"; };
 		EB91CCAE217B46BF0008787F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB41BE221A0EEBE00EEAB0F /* TLMainMapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapInteractor.swift; sourceTree = "<group>"; };
+		EBB41BE421A0EED600EEAB0F /* TLMainMapPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapPresentor.swift; sourceTree = "<group>"; };
+		EBB41BE821A0EEF200EEAB0F /* TLMainMapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLMainMapRouter.swift; sourceTree = "<group>"; };
+		EBB41BEA21A0F8E400EEAB0F /* TLUserNotePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNotePresentor.swift; sourceTree = "<group>"; };
+		EBB41BEC21A0F8EF00EEAB0F /* TLUserNoteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteInteractor.swift; sourceTree = "<group>"; };
+		EBB41BEE21A0F8FD00EEAB0F /* TLUserNoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteEntity.swift; sourceTree = "<group>"; };
+		EBB41BF021A0F90600EEAB0F /* TLUserNoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteRouter.swift; sourceTree = "<group>"; };
 		EBB49387218003A100F49970 /* HTTPURLResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseHandler.swift; sourceTree = "<group>"; };
 		EBB4938921800B1200F49970 /* ArrayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayWrapper.swift; sourceTree = "<group>"; };
 		EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLUserNoteViewModel.swift; sourceTree = "<group>"; };
@@ -193,7 +209,6 @@
 			children = (
 				EBB4938921800B1200F49970 /* ArrayWrapper.swift */,
 				EB544337217D7373009C7AFB /* User.swift */,
-				EB544339217D7381009C7AFB /* TripNote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +246,49 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		EB55411921A1456E000ADDA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB91CC8D217B46BE0008787F /* Main.storyboard */,
+				EB544367217EC227009C7AFB /* TLMainMapViewController.swift */,
+				EB55411E21A145C8000ADDA8 /* TLMainMapViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB55411A21A14575000ADDA8 /* Intercator */ = {
+			isa = PBXGroup;
+			children = (
+				EBB41BE221A0EEBE00EEAB0F /* TLMainMapInteractor.swift */,
+			);
+			path = Intercator;
+			sourceTree = "<group>";
+		};
+		EB55411B21A1457D000ADDA8 /* Presentor */ = {
+			isa = PBXGroup;
+			children = (
+				EBB41BE421A0EED600EEAB0F /* TLMainMapPresentor.swift */,
+			);
+			path = Presentor;
+			sourceTree = "<group>";
+		};
+		EB55411C21A14584000ADDA8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EB55412021A1485E000ADDA8 /* TripNote.swift */,
+				EB55412421A14B2C000ADDA8 /* MDTripNoteAnnotaion.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EB55411D21A14594000ADDA8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EBB41BE821A0EEF200EEAB0F /* TLMainMapRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		EB83D8162185E85A0005869D /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +303,10 @@
 			children = (
 				EB83D81F2186108E0005869D /* Cell */,
 				EB544363217EC20F009C7AFB /* TLUserNoteViewController.swift */,
+				EBB41BEA21A0F8E400EEAB0F /* TLUserNotePresentor.swift */,
+				EBB41BEC21A0F8EF00EEAB0F /* TLUserNoteInteractor.swift */,
+				EBB41BEE21A0F8FD00EEAB0F /* TLUserNoteEntity.swift */,
+				EBB41BF021A0F90600EEAB0F /* TLUserNoteRouter.swift */,
 				EBB4938F2180184500F49970 /* TLUserNoteViewModel.swift */,
 				EB544387217F6E31009C7AFB /* TripNote.storyboard */,
 			);
@@ -254,9 +316,11 @@
 		EB83D8182185E8790005869D /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				EB91CC8D217B46BE0008787F /* Main.storyboard */,
-				EB544367217EC227009C7AFB /* TLMainMapViewController.swift */,
-				EB54436B217EC29C009C7AFB /* TLMainMapViewModel.swift */,
+				EB55411921A1456E000ADDA8 /* View */,
+				EB55411A21A14575000ADDA8 /* Intercator */,
+				EB55411B21A1457D000ADDA8 /* Presentor */,
+				EB55411C21A14584000ADDA8 /* Entity */,
+				EB55411D21A14594000ADDA8 /* Router */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -502,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB91CC97217B46BF0008787F /* LaunchScreen.storyboard in Resources */,
+				EB55411F21A145C8000ADDA8 /* TLMainMapViewController.storyboard in Resources */,
 				EB5F84A1218401B900623CE4 /* LoginStoryboard.storyboard in Resources */,
 				EB5F849B21839D2500623CE4 /* GoogleService-Info.plist in Resources */,
 				EBB4939421801A0000F49970 /* ContentTableViewCell.xib in Resources */,
@@ -705,10 +770,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB55412121A1485E000ADDA8 /* TripNote.swift in Sources */,
 				EB544381217F5E15009C7AFB /* TLFloatButton.swift in Sources */,
 				EB544374217F1410009C7AFB /* TripNoteAnnotationView.swift in Sources */,
 				EB544341217D79E8009C7AFB /* EndPointType.swift in Sources */,
-				EB54433A217D7381009C7AFB /* TripNote.swift in Sources */,
+				EBB41BEB21A0F8E400EEAB0F /* TLUserNotePresentor.swift in Sources */,
+				EBB41BE921A0EEF200EEAB0F /* TLMainMapRouter.swift in Sources */,
 				EB54438D217F8066009C7AFB /* TripNoteEndpoint.swift in Sources */,
 				EBB4938A21800B1200F49970 /* ArrayWrapper.swift in Sources */,
 				EBBE95B62188446D00C19189 /* Dependency.swift in Sources */,
@@ -725,9 +792,14 @@
 				EB83D81C2185F4EF0005869D /* Coordinator.swift in Sources */,
 				EB544378217F48C9009C7AFB /* URLParameterEncoder.swift in Sources */,
 				EBB493902180184500F49970 /* TLUserNoteViewModel.swift in Sources */,
+				EB55412521A14B2C000ADDA8 /* MDTripNoteAnnotaion.swift in Sources */,
+				EBB41BEF21A0F8FD00EEAB0F /* TLUserNoteEntity.swift in Sources */,
+				EBB41BF121A0F90600EEAB0F /* TLUserNoteRouter.swift in Sources */,
+				EBB41BE521A0EED600EEAB0F /* TLMainMapPresentor.swift in Sources */,
 				EB91CC8A217B46BE0008787F /* AppDelegate.swift in Sources */,
 				EB91CC92217B46BE0008787F /* Trip_Landmark_Remark.xcdatamodeld in Sources */,
 				EB54433D217D7828009C7AFB /* TLTheme.swift in Sources */,
+				EBB41BE321A0EEBE00EEAB0F /* TLMainMapInteractor.swift in Sources */,
 				EB54433F217D784B009C7AFB /* UIColor+HexString.swift in Sources */,
 				EB54438F217F821D009C7AFB /* NetworkResponse.swift in Sources */,
 				EB83D81A2185EC570005869D /* UserManager.swift in Sources */,
@@ -735,8 +807,8 @@
 				EBBE95B8218844D100C19189 /* Bindings.swift in Sources */,
 				EB54437A217F4933009C7AFB /* JSONParameterEncoder.swift in Sources */,
 				EB544369217EC227009C7AFB /* TLMainMapViewController.swift in Sources */,
-				EB54436C217EC29C009C7AFB /* TLMainMapViewModel.swift in Sources */,
 				EBB4939621801DED00F49970 /* Reusable.swift in Sources */,
+				EBB41BED21A0F8EF00EEAB0F /* TLUserNoteInteractor.swift in Sources */,
 				EB54438B217F7DD5009C7AFB /* TripNoteService.swift in Sources */,
 				EB54437C217F499F009C7AFB /* NetworkRouter.swift in Sources */,
 			);

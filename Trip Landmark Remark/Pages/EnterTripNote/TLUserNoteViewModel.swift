@@ -7,11 +7,7 @@
 //
 
 import Foundation
-enum TLUserNotePageCellType {
-    case name(title:String, name:String?)
-    case note(title:String, note:String?)
-    case location(location:(String,String))
-}
+
 class TLUserNoteViewModel {
     private let service:TripNoteService
     var cellTypes:[TLUserNotePageCellType]?
